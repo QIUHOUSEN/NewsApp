@@ -1,0 +1,58 @@
+{
+  "guid.html": {
+    "resources": [
+      "images/guid1.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/guid2.jpg",
+      "images/guid3.jpg"
+    ],
+    "refer": [
+      "news.html"
+    ]
+  },
+  "news.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "newsList.html",
+      "images/guid1.jpg",
+      "images/guid2.jpg",
+      "images/guid3.jpg"
+    ],
+    "refer": [
+      "newsList.html",
+      "detail.html"
+    ]
+  },
+  "newsList.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/guid1.jpg",
+      "images/guid2.jpg",
+      "images/guid3.jpg"
+    ],
+    "refer": [
+      "detail.html"
+    ]
+  },
+  "home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "news.html",
+      "guid.html"
+    ]
+  },
+  "detail.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  }
+}

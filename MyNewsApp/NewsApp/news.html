@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+    <style>
+    	/*.mui-bar-nav ~ .mui-content .mui-pull-top-pocket{
+		  top: 100px !important;
+		}*/
+    	
+    </style>
+    
+</head>
+<body>
+	<div class="mui-content" style=" z-index: 10;">
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>-->
+			<h1 class="mui-title">今日新闻</h1>
+		</header>
+		
+		<!--<nav class="mui-bar mui-bar-tab">
+			<button id="btn" type="button" class="mui-btn" style="font-size: 16px; width: 100%; line-height: 100%; margin-top: -10px; padding: 15px;">服务器挂了 猛击这里刷新</button>
+		</nav>-->
+		
+		<!--<nav class="mui-bar mui-bar-tab">
+			<a id="defaultTab" class="mui-tab-item mui-active" href="newslist.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="newslist2.html">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a class="mui-tab-item" href="newslist3.html">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a class="mui-tab-item" href="newslist4.html">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>-->
+	</div>
+	
+	
+	
+	
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init({
+      		subpages:[{
+      			url:'newsList.html',
+      			id:'newsList.html',
+      			/*styles:{
+      				top:'40px',
+      				bottom:'50px'
+      			}*/
+      			styles:{
+      				top:'35px',
+      				bottom:'8px'
+      			}
+      			
+      		}]
+	
+      	});
+      	//var showMenu = false;
+      	//首页返回键处理
+			//处理逻辑：1秒内，连续两次按返回键，则退出应用；
+		mui.plusReady(function(){
+			//setTimeout(askAjax,2000);
+			if ('Android' == plus.os.name) {
+				var first = null;
+				mui.back = function() {
+					/*if (showMenu) {
+						closeMenu();
+					} else {*/
+						//首次按键，提示‘再按一次退出应用’
+						if (!first) {
+							first = new Date().getTime();
+							mui.toast('再按一次退出应用');
+							setTimeout(function() {
+								first = null;
+							}, 1000);
+						} else {
+							if (new Date().getTime() - first < 1000) {
+								plus.runtime.quit();
+							}
+						}
+					//}
+				};
+       		}	
+       		
+		});
+		
+
+    </script>
+    
+</body>
+</html>

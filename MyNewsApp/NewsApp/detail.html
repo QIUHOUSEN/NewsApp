@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>   
+    <link href="css/mui.min.css" rel="stylesheet"/>  
+</head>
+<body>
+	
+	
+	
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	var statuses;
+      	//中间内容传过来 的数据
+		var newsurls;
+		var newsides;
+		var webviewss = new Array();
+		//下拉刷新时传过来的数据
+		var downnewsurls;
+		var downid;
+		var downwebviews = new Array();
+		//上拉加载时传过来的数据
+		var upurls;
+		var upid;
+		var upwebviews = new Array();
+		//轮播图穿过来的数据
+		var slidurls;
+		var slidid;
+		var slidwebviews = new Array();
+		
+		mui.plusReady(function(){
+			var current = plus.webview.currentWebview();
+			statuses = current.statuses;
+			if(statuses=='down'){
+				//alert('downs');
+				//获取下拉时传过来的数据
+				downnewsurls = current.downnewsurls;
+				downid = current.downid;
+				//alert(downid);
+				
+				if(downwebviews.length==0){
+					for(var i=0; i<downnewsurls.length; i++){
+						downwebviews[i]=plus.webview.create(downnewsurls[i],'downid'+i);
+						downwebviews[i].hide();
+					}	
+				}
+				plus.webview.show('downid'+downid);
+			}
+			else if(statuses=='mid'){
+				newsurls = current.newsurls;
+				newsides = current.newsid;
+				
+				//webviewss = current.webviewss;
+				//alert(webviewss.length+" sdf");
+				var positions = newsurls[newsides-1];
+				
+				//alert(webviewss.length);
+				if(webviewss.length==0){
+					for(var i=0; i<newsurls.length; i++){
+						//plus.webview.create(newsurls[i],'news'+i).hide();
+						webviewss[i] = plus.webview.create(newsurls[i],'news'+i);
+		      			webviewss[i].hide();
+					}
+				}
+				plus.webview.show('news'+(newsides-1));
+				
+			}
+			else if(statuses=='up'){
+				//alert('downs');
+				//获取上拉时传过来的数据
+				upurls = current.upurls;
+				upid = current.upid;
+				//alert(downid);
+				
+				if(upwebviews.length==0){
+					for(var i=0; i<upurls.length; i++){
+						upwebviews[i]=plus.webview.create(upurls[i],'upid'+i);
+						upwebviews[i].hide();
+					}	
+				}
+				plus.webview.show('upid'+upid);	
+			}
+			else if(statuses=='slid'){
+				//alert('downs');
+				//获取上拉时传过来的数据
+				slidurls = current.slidurls;
+				slidid = current.slidid;
+				//alert(downid);
+				
+				if(slidwebviews.length==0){
+					for(var i=0; i<slidurls.length; i++){
+						slidwebviews[i]=plus.webview.create(slidurls[i],'slidid'+i);
+						slidwebviews[i].hide();
+					}	
+				}
+				plus.webview.show('slidid'+slidid);
+			}
+	
+		});
+    </script>
+</body>
+</html>

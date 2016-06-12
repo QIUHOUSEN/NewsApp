@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style>
+    	/*.slid{
+    		position: absolute;
+    		bottom: 200px;
+    	}*/
+    	.animate{
+    		position: absolute;
+    		bottom: 10%;
+    		left: 38%;
+    		width: 25%;
+    	}
+    </style>
+    
+</head>
+<body>
+	<!--<div class="mui-content">	-->	
+	<div id="slider" class="mui-slider mui-fullscreen" style="background-color: black;">
+		  	<div class="mui-slider-group">
+			    <!--第一个内容区容器-->
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="images/guid1.jpg" />			 
+			    </div>
+			    <!--第二个内容区-->
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="images/guid2.jpg" />
+			    </div>
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="images/guid3.jpg" />
+			      <div class="animate" id="guidOk">
+					<button id='close' class="mui-btn mui-btn-warning mui-btn-outlined">立即体验</button>
+				  </div>
+			    </div>		   
+			</div>
+			
+			<div class="mui-slider-indicator slid">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+	</div>
+	<!--</div>--><!--mui所有内容都要放在这里（注意class）-->
+	
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function(){     		
+      		var guidOk = document.getElementById('guidOk');
+      		guidOk.addEventListener('tap',function(){
+      			plus.storage.setItem('showguide','0');
+      			mui.openWindow({
+      				url:'news.html',
+      				id:'news',
+      				show:{
+      					/*autoShow:true, */
+      					anishow:'none'
+      				},
+      				waiting:{
+      					autoShow:true      					
+      				},
+      				
+      			});	
+      		},false);     		
+      	});
+      	
+      	
+      	
+      	
+      	
+    </script>
+</body>
+</html>

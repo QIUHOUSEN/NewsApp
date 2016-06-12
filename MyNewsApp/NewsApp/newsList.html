@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	.freshNews span{
+    		text-overflow: ellipsis;
+    		overflow: hidden;
+    		white-space: nowrap;
+    		display: block;
+    	}
+    	.others{
+    		padding-top: 20px;
+    		padding-bottom: 20px;
+    	}
+    	
+    </style>
+    
+</head>
+<body>
+	
+	<div class="mui-content" style="z-index: 10;">		
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">			
+		 <div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="" id="first" /></a></div>				
+			    <!--第一个内容区容器-->
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="" class="slide" />			 
+			    </div>
+			    <!--第二个内容区-->
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="" class="slide" />
+			    </div>
+			    <div class="mui-slider-item">
+			      <!-- 具体内容 -->
+			      <img src="" class="slide" />			
+			    </div>				    
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="1.jpg" id="second" /></a></div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<!--<div class="mui-indicator"></div>-->
+			</div>
+		</div>
+			
+			<div class="mui-scroll">
+				<ul class="mui-table-view mui-table-view-chevron" style="margin-top: -1px;">
+						<li class="mui-table-view-cell mui-media  others">
+							<div class="mui-slider-left mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<a class="mui-navigate-right mui-slider-handle">
+								<img class="mui-media-object mui-pull-left" src="">
+								<div class="mui-media-body  midfreshNews" dataid="1">
+									<span>上拉下拉刷新或者关闭重新运行</span>
+									<p class='mui-ellipsis'>上拉下拉刷新或者关闭重新运行</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media  others">
+							<div class="mui-slider-left mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<a class='mui-navigate-right mui-slider-handle'>
+								<img class="mui-media-object mui-pull-left" src="">
+								<div class="mui-media-body  midfreshNews" dataid="2">
+									<span>上拉下拉刷新或者关闭重新运行</span>
+									<p class='mui-ellipsis'>上拉下拉刷新或者关闭重新运行</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media  others">
+							<div class="mui-slider-left mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<a class="mui-navigate-right  mui-slider-handle">
+								<img class="mui-media-object mui-pull-left" src="">
+								<div class="mui-media-body  midfreshNews" dataid="3">
+									<span>上拉下拉刷新或者关闭重新运行</span>
+									<p class='mui-ellipsis'>上拉下拉刷新或者关闭重新运行</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media  others">
+							<div class="mui-slider-left mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<a class='mui-navigate-right  mui-slider-handle'>
+								<img class="mui-media-object mui-pull-left" src="">
+								<div class="mui-media-body  midfreshNews" dataid="4">
+									<span>上拉下拉刷新或者关闭重新运行</span>
+									<p class='mui-ellipsis'>上拉下拉刷新或者关闭重新运行</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media  others">
+							<div class="mui-slider-left mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-red">删除</a>
+							</div>
+							<a class="mui-navigate-right   mui-slider-handle">
+								<img class="mui-media-object mui-pull-left" src="">
+								<div class="mui-media-body  midfreshNews" dataid="5">
+									<span>上拉下拉刷新或者关闭重新运行</span>
+									<p class='mui-ellipsis'>上拉下拉刷新或者关闭重新运行</p>
+								</div>
+							</a>
+						</li>				
+				</ul>
+			</div>	
+		</div>	
+			
+	</div> <!--visibility: hidden; opacity: 0; -->
+	<button id="bt" type="button" style="background-color: rgba(242,246,248,1); bottom: -8px; margin-top: 20px;position: fixed; font-size: 16px; width: 100%; height: 30px;padding: 0px;">若无新闻界面点击此处刷新请等待...</button>
+	
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+		var bt = document.getElementById('bt');
+		
+      	mui.init({
+		  pullRefresh : {
+		    container:'#pullrefresh',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+		    down: {
+		    		/*contentdown : "下拉可以刷新",//在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+      				contentover : "释放立即刷新",*///在释放可刷新状态时，下拉刷新控件上显示的标题内容
+		    		contentrefresh: '正在刷新...',
+					callback: pulldownRefresh
+				  },
+		    up: {
+				 contentrefresh: '正在加载...',
+				 callback: pullupRefresh
+		    }
+		  }
+		});
+      	
+      	mui.plusReady(function(){
+      		isdelete();//调用左右滑动删除新闻的确认按钮
+      		setInterval(ajaxAsk,15000);
+      		//向服务器请求显示首先出来的5条消息
+      		setInterval(ajaxAskSlider,10000);//每隔10秒钟换一组轮播图
+      		
+      		var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			
+			bt.addEventListener('tap',function(){
+				var cur = plus.webview.currentWebview();
+				//alert('sdf');
+				cur.reload(false);
+			});
+				      		
+		});
+		
+		
+      	//访问请求服务器，获得轮播图数据
+      	function ajaxAskSlider(){
+      		mui.ajax('http://apis.baidu.com/songshuxiansheng/news/news',{	
+						async: false,//同步执行
+						dataType:'json',//服务器返回json格式数据
+						type:'get',//HTTP请求类型						
+						headers: {
+								"apikey": "746fab35dcaa83cfcea8ebb1a5f43642"
+						},
+						contentType: "application/json",
+						success:function(data,textStatus,xhr){
+							//获得服务器响应
+							var news = JSON.parse(xhr.responseText);
+							showSlider(news);//调用显示轮播图的函数							
+						},
+						error:function(xhr,type){
+								bt.style.visibility="visible";
+								bt.style.opacity='1';							  
+						}	
+					});
+      		
+      	}
+      	  
+		
+		var imgSrcc = new Array();
+		var urlss = new Array();
+		function showSlider(news){//显示轮播图的函数
+			var fir = document.getElementById('first');
+			var sec = document.getElementById('second');
+			for(var i=0; i<3; i++){
+				imgSrcc[i] = news.retData[i].image_url;//从服务器获取简图片设置新闻的图片
+  				urlss[i]=news.retData[i].url;	 				
+			}
+			var imgs = document.getElementsByClassName('slide');			
+			fir.src=imgSrcc[2];
+			sec.src=imgSrcc[0];
+			for(var i=0; i<imgs.length; i++){				
+				imgs[i].src=imgSrcc[i];
+				imgs[i].setAttribute('slidid',i);
+				imgs[i].addEventListener('tap',function(){
+					var slidid = this.getAttribute('slidid');
+					mui.openWindow({
+						url:'detail.html',
+						id:'detail',
+						extras:{
+	      					'slidurls':urlss,
+	      					'slidid':slidid,
+	      					'statuses':'slid'
+	      					//'webviewss':webviewss
+      					}	
+						
+					});
+					
+				});
+			}
+			
+			
+		}
+      	//确认是否删除该条信息
+      	function isdelete(){
+      		var btns = document.getElementsByClassName('mui-btn');      		
+      		for(var i=0; i<btns.length; i++){
+      			btns[i].addEventListener('tap', function(event) {
+      				var btnArray = ['确认', '取消'];	
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+						if (e.index == 0) {
+							li.parentNode.removeChild(li);
+						} else {							
+								mui.swipeoutClose(li);
+						}
+					});
+				});    				
+      		}				
+      	}     	    	
+      	/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				var spanNews=new Array();
+				var pNews=new Array();
+				var imgSrc=new Array();		
+				var urls = new Array();
+				var li;
+				var lis = new Array();
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					mui.ajax('http://apis.baidu.com/songshuxiansheng/news/news',{	
+						async: false,//同步执行
+						dataType:'json',//服务器返回json格式数据
+						type:'get',//HTTP请求类型						
+						headers: {
+								"apikey": "746fab35dcaa83cfcea8ebb1a5f43642"
+						},
+						contentType: "application/json",
+						success:function(data,textStatus,xhr){
+							//获得服务器响应
+							var news = JSON.parse(xhr.responseText);
+							for(var i=0;i<3;i++){
+								spanNews[i] = news.retData[i].title;//从服务器获取标题设置新闻的标题
+	      						pNews[i] = news.retData[i].abstract;//从服务器获取简介设置新闻的简介
+	      						imgSrc[i] = news.retData[i].image_url;//从服务器获取简图片设置新闻的图片
+	      						urls[i]=news.retData[i].url;			
+							}
+						},
+						error:function(xhr,type){
+							bt.style.visibility="visible";
+								bt.style.opacity='1';
+							  //alert(type);	
+							  //alert('no');
+							  //alert('没有获取到任何新闻');
+						}	
+					});
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media  others';
+						li.setAttribute("downid",(i-cells.length));						
+						li.innerHTML = '<div class="mui-slider-left mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><a class="mui-navigate-right  mui-slider-handle"><img class="mui-media-object mui-pull-left" src='+imgSrc[i-cells.length]+'><div class="mui-media-body  freshNews" dataid='+i+'><span>'+spanNews[i-cells.length]+'</span><p class="mui-ellipsis">'+pNews[i-cells.length]+'</p></div></a>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+						lis.push(li);						
+					}					
+					var freshNewses = document.getElementsByClassName('freshNews');					
+					isdelete();					
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed					
+					for(var i=0; i<lis.length; i++){
+						freshNewses[i].addEventListener('tap',function(){							
+							var downid = this.parentNode.parentNode.getAttribute('downid');							
+							mui.openWindow({
+								url:'detail.html',
+								id:'detail',
+								extras:{
+			      					'downnewsurls':urls,
+			      					'downid':downid,
+			      					'statuses':'down'
+			      					//'webviewss':webviewss
+		      					}									
+							});						
+						});						
+					}					
+				},1500);								
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				var spanNews=new Array();
+				var pNews=new Array();
+				var imgSrc=new Array();		
+				var urls = new Array();
+				var li;
+				var lis = new Array();					
+				setTimeout(function() {					
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					
+					mui.ajax('http://apis.baidu.com/songshuxiansheng/news/news',{		
+						async: false,//同步执行
+						dataType:'json',//服务器返回json格式数据
+						type:'get',//HTTP请求类型
+						
+						headers: {
+								"apikey": "746fab35dcaa83cfcea8ebb1a5f43642"
+						},
+						contentType: "application/json",
+						success:function(data,textStatus,xhr){
+							//获得服务器响应
+							var news = JSON.parse(xhr.responseText);
+							for(var i=0;i<3;i++){
+								spanNews[i] = news.retData[i].title;//从服务器获取标题设置新闻的标题
+	      						pNews[i] = news.retData[i].abstract;//从服务器获取简介设置新闻的简介
+	      						imgSrc[i] = news.retData[i].image_url;//从服务器获取简图片设置新闻的图片
+	      						urls[i]=news.retData[i].url;	      										
+							}
+						},
+						error:function(xhr,type){
+							bt.style.visibility="visible";
+								bt.style.opacity='1';
+							  
+						}	
+					});
+					
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media  others';
+						li.setAttribute("upid",(i-cells.length));
+						li.innerHTML = '<div class="mui-slider-left mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><a class="mui-navigate-right  mui-slider-handle"><img class="mui-media-object mui-pull-left" src='+imgSrc[i-cells.length]+'><div class="mui-media-body  upfreshNews" dataid='+i+'><span>'+spanNews[i-cells.length]+'</span><p class="mui-ellipsis">'+pNews[i-cells.length]+'</p></div></a>';
+						table.appendChild(li);
+						lis.push(li);		
+					}
+					
+					var freshNewses = document.getElementsByClassName('upfreshNews');					
+					isdelete();
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh(); //refresh completed
+					for(var i=0; i<freshNewses.length; i++){
+						freshNewses[i].addEventListener('tap',function(){							
+							var upid = this.parentNode.parentNode.getAttribute('upid');							
+							mui.openWindow({
+								url:'detail.html',
+								id:'detail',
+								extras:{
+			      					'upurls':urls,
+			      					'upid':upid,
+			      					'statuses':'up'
+			      					//'webviewss':webviewss
+		      					}									
+							});							
+						});	
+					}					
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+      		
+      	var newsurls = new Array();     	
+      	function showNews(news){
+      		//alert(news.retData.length);
+      		var midfreshNews = document.getElementsByClassName('midfreshNews');
+      		var imgs= document.getElementsByClassName('mui-pull-left');    		
+      		for(var i=0; i<midfreshNews.length; i++){
+      			var spanNews = news.retData[i].title;//从服务器获取标题设置新闻的标题
+      			var pNews = news.retData[i].abstract;//从服务器获取简介设置新闻的简介
+      			var imgSrc = news.retData[i].image_url;//从服务器获取简图片设置新闻的图片
+      			imgs[i].src=imgSrc;
+      			//newsurls.push(news.retData[i].url); 		
+      			newsurls[i]=news.retData[i].url;
+      			midfreshNews[i].getElementsByTagName('span')[0].innerHTML=spanNews;
+      			midfreshNews[i].getElementsByTagName('p')[0].innerHTML=pNews;     			
+      		}   
+      		
+      		//var freshNewses = document.getElementsByClassName("freshNews");     
+      		for(var i=0; i<midfreshNews.length; i++){
+      			//点击每个消息的时候，跳转到相应的网页
+      			midfreshNews[i].addEventListener('tap',function(){					
+					var newsid = this.getAttribute('dataid');				
+					mui.openWindow({//具体逻辑处理在detail页面
+	      				url:'detail.html',
+	      				id:'detail',
+	      				show:{
+	      					aniShow:'slide-in-right',
+	      					/*autoShow:true*/
+	      					duration:'2000'
+	      				},
+	      				waiting:{
+	      					autoShow:true,
+	      					title:'正在加载...',
+	      					duration:'1000'
+	      				},
+	      				extras:{
+	      					'newsurls':newsurls,
+	      					'newsid':newsid,
+	      					'statuses':'mid'	      					
+      					}					
+					});
+      			});
+      			/*//创建5个webview，隐藏
+      			plus.webview.create(newsurls[i],'newsurls'+i).hide();*/
+			}
+      		
+      	}
+      	
+
+		//ajax请求返回数据调用
+		function ajaxAsk(){
+				mui.ajax('http://apis.baidu.com/songshuxiansheng/news/news',{		
+					async: false,//同步执行
+					dataType:'json',//服务器返回json格式数据
+					type:'get',//HTTP请求类型
+					headers: {
+							"apikey": "746fab35dcaa83cfcea8ebb1a5f43642"
+					},
+					contentType: "application/json",
+					success:function(data,textStatus,xhr){
+						//获得服务器响应
+						var news = JSON.parse(xhr.responseText);						
+						showNews(news);	//调用此函数显示首先出现的5个新闻			
+					},
+					error:function(xhr,type){	
+						  //alert(type);	
+						  //alert('no');
+						  //alert('没有获取到任何新闻');
+					}	
+				});	
+		}
+			
+    </script>
+</body>
+</html>
